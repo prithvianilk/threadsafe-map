@@ -1,9 +1,13 @@
 #pragma once
 
+#include <list>
+
+using namespace std;
+
 class threadsafe_map {
  private:
-  static const int N = 1e5;
-  int* array;
+  static const int MAX_SIZE = 1e5;
+  list<pair<int, int>>* array;
   int hash(int);
 
  public:
