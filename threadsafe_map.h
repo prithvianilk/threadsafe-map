@@ -23,3 +23,12 @@ class threadsafe_map {
   void put(int, int);
   void erase(int);
 };
+
+class is_equal {
+ private:
+  int key;
+
+ public:
+  is_equal(int);
+  bool operator()(pair<int, int>&);
+};
